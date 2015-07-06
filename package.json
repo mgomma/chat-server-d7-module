@@ -1,0 +1,23 @@
+{
+  "name": "chat-server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "chat_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammed Gomma <mgomma90@gmail.com> (http://mgomma.branded.me)",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "lodash": ">=3.5.x",
+    "mysql": "^2.5.5",
+    "pm2": "^0.12.7",
+    "request": "^2.53.0",
+    "socket.io": "~1.3.*",
+    "hiredis": "~0.4.*",
+    "redis": "~0.12.*"
+  },
+  "devDependencies": {
+  }
+}

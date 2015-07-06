@@ -1,0 +1,4 @@
+name = Chat
+description = Provides a real-time (node.js powered) chat client and server.
+core = 7.x
+version = 7.x-0.1
