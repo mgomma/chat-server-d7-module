@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the chat messages module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function chat_schema() {
+  $schema['chat_messages'] = array(
+    'description' => 'Chat messages history between drupal users.',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique message ID.',
+      ),
+      'sender' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Sender uid.',
+          'default' => 0
+      ),
+      'receiver' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Receiver uid.',
+          'default' => 0
+      ),
+      'message' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 255,
+        'description' => 'message body.',
+          'default' => ''
+      ),
+      'timestamp' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Message timestamp.',
+        'default' => 0
+      ),
+    ),
+    'indexes' => array(
+      'uids' => array('sender', 'receiver'),
+    ),
+     'unique keys' => array(
+      'id' => array('id'),
+      ),'primary key' => array('id'),
+  );
+  
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function chat_install() {
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function chat_uninstall() {
+}
