@@ -1,0 +1,14 @@
+
+
+Nodejs integration with d7 
+
+Installation:
+
+Must have nodejs and npm installed on the system see https://nodejs.org/
+To install dependencies run: npm install
+Install pm2 for production see  https://www.npmjs.com/package/pm2
+run the chat server : pm2 start chat_server.js
+
+
+Feature requests and support are welcomed 
+contact me : mgomma90@gmail.com
